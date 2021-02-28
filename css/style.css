@@ -1,0 +1,491 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 31px;
+  font-weight: 500;
+  font-style: normal;
+  color: #000;
+  min-width: 1200px;
+}
+
+img {
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.page-header {
+  box-shadow: 0 4px 20px rgba(35, 35, 36, 0.15);
+}
+
+.page-header__nav {
+  padding: 21px 0 25px 0;
+}
+
+.page-header__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  padding-top: 4px;
+  margin-right: 20px;
+}
+
+.logo:hover,
+.logo:focus {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.logo:active {
+  opacity: 0.3;
+}
+
+.site-nav__list {
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+  min-width: 530px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.site-nav__link {
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.site-nav__link[href]:hover,
+.site-nav__link[href]:focus {
+    color: #c21d11;
+    border-bottom: 1px solid #c21d11;
+}
+
+ .site-nav__link[href]:active {
+    border-bottom: 1px solid rgba(194, 29, 17, 0.5);
+    color: rgba(194, 29, 17, 0.5);
+}
+
+.site-nav__link--active {
+  text-decoration: line-through;
+}
+
+.contacts__phone {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000;
+  text-decoration: none;
+  margin-left: 118px;
+}
+
+.contacts__phone::before {
+  content: "";
+  width: 11px;
+  height: 15px;
+  margin-right: 10px;
+  background-image: url("../img/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.breadcrumbs__list {
+  padding: 58px 0 20px 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.breadcrumbs__item {
+  display: flex;
+  padding-right: 3px;
+  align-items: center;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: "/";
+  font-size: 12px;
+  line-height: 18px;
+  padding-left: 3px;
+}
+
+.breadcrumbs__link {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+
+.page-article__header-img {
+  margin: 0 auto;
+}
+
+.page-article__header {
+  position: relative;
+}
+
+.page-article__title {
+  position: absolute;
+  background-color: #fff;
+  padding: 20px 38px;
+  font-family: "Cormorant", "Georgia", serif;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  width: 656px;
+  top: 11%;
+  left: 23%;
+}
+
+.meta-row {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 393px;
+  padding-top: 30px;
+}
+
+.meta-col {
+  margin-right: 10px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: bold;
+}
+
+.meta__date::before {
+  content: "";
+  width: 25px;
+  height: 26px;
+  margin-right: 10px;
+  background-image: url("../img/bag-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.meta__time::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background-image: url("../img/watch-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.meta__views::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background-image: url("../img/eye-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.content-wrapper {
+  width: 700px;
+  margin: 0 auto;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+}
+
+.page-article__lead {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 31px;
+  padding: 26px 0;
+  margin: 50px 0 56px 0;
+}
+
+.dotted {
+  position: relative;
+}
+
+.dotted::before,
+.dotted::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 6px;
+  background-image: url("../img/points.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dotted::before {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dotted::after {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rules__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: rules-counter;
+}
+
+.rules__item {
+  counter-increment: rules-counter;
+  position: relative;
+  margin-bottom: 67px;
+}
+
+.rules__item::before {
+  content: "" counter(rules-counter);
+  position: absolute;
+  top: -35px;
+  left: 0;
+  font-family: "Cormorant", "Georgia", serif;
+  font-size: 65px;
+  line-height: 97px;
+  font-weight: bold;
+  font-style: normal;
+  color: #000;
+}
+
+.rule__title {
+  font-family: "Cormorant", "Georgia", serif;
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: bold;
+  padding: 0 0 17px 65px;
+  margin: 0;
+}
+
+.rule__text {
+  margin: 0;
+  padding: 0;
+}
+
+.rule__note {
+  display: flex;
+}
+
+.note__text {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin: auto 0 auto 30px;
+  padding: 26px 0;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: -207px;
+}
+
+.social {
+  width: 109px;
+}
+
+.sidebar__title {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+}
+
+.social__list {
+  padding: 0;
+  margin: 0;
+  margin-right: 23px;
+  margin-top: 20px;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social__item {
+  position: relative;
+  margin-bottom: 54px;
+}
+
+.social__link--vk::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  background-image: url("../img/vk-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.social__link--fb::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.social__link--insta::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  background-image: url("../img/inst-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.rules__item:nth-child(2) img {
+  margin-top: 30px;
+}
+
+.rating {
+  width: 168px;
+  top: 10px;
+  left: -235px;
+  padding: 16px 0 18px 0;
+}
+
+.rating__title {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.tools__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  width: 100px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.like-button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.like-button--no {
+  position: relative;
+  top: 6px;
+  left: -3px;
+  transform: rotate(-180deg);
+}
+
+.restaurant-guide {
+  width: 258px;
+  height: 215px;
+  padding: 0 37px;
+  position: relative;
+  background-color: #F1F1F2;
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+}
+
+.restaurant-guide .mini-img {
+  border-radius: 50%;
+  border: 6px solid #6BB9B5;
+  width: 104px;
+  height: 104px;
+}
+
+.right-floated {
+  float: right;
+}
+
+.restaurant-guide__link {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Cormorant", "Georgia", serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000;
+}
+
+.restaurant-guide__title {
+  font-family: "Cormorant", "Georgia", serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.restaurant-guide-button  {
+  border: none;
+  position: absolute;
+  top: 53%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.restaurant-guide-button-prev {
+  transform: rotate(-180deg);
+  left: 11%;
+}
+
+.restaurant-guide-button-next {
+  right: 11%;
+}
+

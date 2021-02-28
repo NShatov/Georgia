@@ -4,16 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700;1,500&family=Raleway:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700;1,500&family=Raleway:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Блогик. 10 Золотых правил для поездки в Грузию</title>
+    <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* Mobile layout by default */
+    background-image: url( "img/index.jpg" );
+  }
+</style>
+<link href="node_modules/pixel-glass/styles.css" rel="stylesheet">
+<script src="node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
+
   </head>
-  <body>    
+  <body>
     <header class="page-header">
       <nav class="page-header__nav">
         <div class="container">
           <div class="page-header__wrapper">
-            <a class="page-header__logo logo">
+            <a class="page-header__logo logo" href="index.html">
               <img src="img/logo.svg" width="53" height="23" alt="Блогик">
             </a>
             <ul class="site-nav__list">
@@ -45,7 +58,7 @@
             <h1 class="page-article__title">10 золотых правил для поездки в Грузию</h1>
             <div class="meta-row">
               <div class="meta-col">
-                <time class="meta meta__date" datetime="2019-12-26">26 Декабря 2019</time>
+                <time class="meta meta__date" datetime="2019-12-26">26 декабря 2019</time>
               </div>
               <div class="meta-col">
                 <span class="meta meta__time">15 мин</span>
@@ -53,11 +66,11 @@
               <div class="meta-col">
                 <span class="meta meta__views">16 129</span>
               </div>
-            </div>      
-          </div>              
-        </header>        
-          <div class="content__wrapper">
-            <p class="page-article__lead dotted">Сегодня мы подготовили для вас топ-10 правил поездки в Грузию. Мы надеемся, что эта статья развеет некоторые заблуждения и ложные ожидания и сделает ваш отдых в Грузии волшебным.</p>            
+            </div>
+          </div>
+        </header>
+          <div class="content-wrapper">
+            <p class="page-article__lead dotted">Сегодня мы подготовили для вас топ-10 правил поездки в Грузию. Мы надеемся, что эта статья развеет некоторые заблуждения и ложные ожидания и сделает ваш отдых в Грузии волшебным.</p>
             <ul class="rules__list">
               <li class="rules__item">
                 <section class="rule">
@@ -66,7 +79,7 @@
                   <div class="rule__note">
                     <img src="img/photo-1.jpg" width="343" height="216" alt="Мужчина с лошадью в горах Грузии">
                     <p class="note__text dotted">Запомните: грузинское гостеприимство работает по полной, если вы сами готовы открыться и быть другом.</p>
-                  </div>                  
+                  </div>
                 </section>
                 <aside class="sidebar social">
                   <h2 class="sidebar__title">Поделиться в соцсетях</h2>
@@ -79,30 +92,31 @@
                     </li>
                      <li class="social__item">
                       <a class="social__link social__link--insta" href="#" aria-label="Instagram"></a>
-                    </li>                    
+                    </li>
                   </ul>
                 </aside>
               </li>
               <li class="rules__item">
                 <section class="rule">
-                  <h2 class="rule__title">Хорошие экскурсии</h2>                  
+                  <h2 class="rule__title">Хорошие экскурсии</h2>
                   <p class="rule__text">Чтобы не разочароваться в экскурсионной программе, стоит заранее позаботиться о выборе гида. К сожалению, в Грузии нет обязательной сертификации гидов и экскурсионных бюро, поэтому есть вероятность нарваться на непрофессионалов.</p>
                   <img src="img/photo-2.jpg" width="304" height="453" alt="Старинная церковь в Грузии">
-                </section>                
+                </section>
               </li>
               <li class="rules__item">
                 <section class="rule">
                   <h2 class="rule__title">Вкусная еда</h2>
                   <aside class="restaurant-guide right-floated">
-                    <h3>Рестораны Грузии</h3>
-                    <a href="#">
+                    <h3 class="restaurant-guide__title">Рестораны Грузии</h3>
+                    <a class="restaurant-guide__link" href="#">
                       <figure>
-                        <img src="img/img-mini.jpg" width="94" height="94" alt="Ресторан Grand cafe">
+                        <img class="mini-img" src="img/img-mini.jpg" width="94" height="94" alt="Ресторан Grand cafe">
                         <figcaption>Grand cafe</figcaption>
                       </figure>
                     </a>
-                    <button class="restaurant-guide-button restaurant-guide-button-prev" type="button"><span class="visually-hidden">Назад</span></button>
-                    <button class="restaurant-guide-button restaurant-guide-button-next" type="button"><span class="visually-hidden">Вперёд</span></button>
+                    <button class="restaurant-guide-button restaurant-guide-button-prev" type="button"><span class="visually-hidden">Назад</span>
+                      <img src="img/arrow.svg" width="21" height="12" alt="стрелка"></button>
+                    <button class="restaurant-guide-button restaurant-guide-button-next" type="button"><span class="visually-hidden">Вперёд</span><img src="img/arrow.svg" width="21" height="12" alt="стрелка"></button>
                   </aside>
                   <p class="rule__text">Многие полагают, что в Грузии они смогут есть вкусную еду и пить вино на каждом шагу, при этом тратя на это сущие копейки. Это не так.</p>
                   <p class="rule__text">В Грузии действительно можно найти недорогие и хорошие кафе, а также рестораны, но для этого нужно читать отзывы и рекомендации. Так вы не разочаруетесь в грузинской кухне и не получите пищевое отравление, а вместо этого приобретете только приятные впечатления и сытость для прогулок.</p>
@@ -119,13 +133,13 @@
                       <button class="like-button like-button--no" type="button" aria-label="Не нравится">
                       <img src="img/like-icon.svg" width="28" height="28" alt="Вниз"></button>
                     </li>
-                  </ul>                                
+                  </ul>
                 </aside>
               </li>
               <li class="rules__item">
                 <section class="rule">
-                  <h2 class="rule__title">Быстрый сервис</h2>                  
-                  <p class="rule__text">С этим нужно просто смириться. В Грузии, как впрочем и других регионах Кавказа, не привыкли торопиться. Вам стоит набраться терпения и принять с улыбкой нерасторопных сотрудников.</p>                  
+                  <h2 class="rule__title">Быстрый сервис</h2>
+                  <p class="rule__text">С этим нужно просто смириться. В Грузии, как впрочем и других регионах Кавказа, не привыкли торопиться. Вам стоит набраться терпения и принять с улыбкой нерасторопных сотрудников.</p>
                 </section>
                 <aside class="excursions">
                   <h2 class="excursions__title">Экскурсии по Грузии:</h2>
@@ -153,19 +167,19 @@
                         <h3 class="excursions__subtitle">Экскурсия по городу</h3>
                         <img src="img/gallery-4.jpg" width="278" height="161" alt="Вид на вечерний город">
                       </a>
-                    </li>                    
+                    </li>
                   </ul>
                   <p class="excursions-tools">
                     <button class="excursions-tools-button excursions-tools-button-prev" type="button"><span class="visually-hidden">Назад</span></button>
                     <span>01</span>/<span>04</span>
                     <button class="excursions-tools-button excursions-tools-button-next" type="button"><span class="visually-hidden">Вперёд</span></button>
                   </p>
-                  <a class="more" href="#">Смотреть все экскурсии</a>                  
+                  <a class="more" href="#">Смотреть все экскурсии</a>
                 </aside>
               </li>
               <li class="rules__item">
                 <section class="rule">
-                  <h2 class="rule__title">Хорошее вино</h2>                  
+                  <h2 class="rule__title">Хорошее вино</h2>
                   <p class="rule__text">Грузия считается родиной вина, и здесь принято говорить: <q>Плохого вина не бывает. Бывает только хорошее и очень хорошее вино!</q>. Однако, нужно понимать, что и здесь вы можете купить не очень хорошее вино.</p>
                   <div class="rule__note">
                     <img class="left-floated" src="img/photo-4.jpg" width="343" height="216" alt="Бокалы с грузинским вином">
@@ -185,20 +199,20 @@
               </li>
               <li class="rules__item">
                 <section class="rule">
-                  <h2 class="rule__title">Не ругайтесь</h2>                  
+                  <h2 class="rule__title">Не ругайтесь</h2>
                   <img class="left-floated" src="img/mat.png" width="138" height="139" alt="Запрет мата">
                   <p class="rule__text">Мат и ненормативная лексика понятны не только старшему поколению, знающему русский, но и всему остальному населению, и воспринимается очень негативно. Не стоит использовать мат как в обращении к грузинам, так и в общении друг с другом. Если ругаться при грузинах, они не просто за это &laquo;по голове не погладят&raquo;, реакция может быть абсолютно непредсказуемая, вплоть до драки, а Вам, наверняка, не нужны лишние проблемы в отпуске :).</p>
                 </section>
               </li>
               <li class="rules__item">
                 <section class="rule">
-                  <h2 class="rule__title">Наркотики в Грузии</h2>                  
+                  <h2 class="rule__title">Наркотики в Грузии</h2>
                   <p class="rule__text">Не стоит баловаться наркотическими веществами в Грузии. Несмотря на то, что в законодательство внесены предложения на легализацию легких наркотиков, грузинская полиция серьезно следит за такими правонарушениями.</p>
                 </section>
               </li>
               <li class="rules__item">
                 <section class="rule">
-                  <h2 class="rule__title">Не все знают русский язык</h2>                  
+                  <h2 class="rule__title">Не все знают русский язык</h2>
                   <p class="rule__text">Несмотря на то, что Грузия является территорией постсоветского пространства, здесь далеко не всего знают русский. Как правило, на русском языке говорят люди старшего возраста, а молодёжь лучше знает английский язык.</p>
                 </section>
               </li>
@@ -231,7 +245,7 @@
               </li>
             </ul>
           </div>
-        </footer>          
+        </footer>
       </article>
       <section class="news">
         <div class="container">
