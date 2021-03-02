@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
-  line-height: 31px;
+  line-height: 32px;
   font-weight: 500;
   font-style: normal;
   color: #000;
@@ -86,13 +86,13 @@ img {
 
 .site-nav__link[href]:hover,
 .site-nav__link[href]:focus {
-    color: #c21d11;
-    border-bottom: 1px solid #c21d11;
+  color: #c21d11;
+  border-bottom: 1px solid #c21d11;
 }
 
  .site-nav__link[href]:active {
-    border-bottom: 1px solid rgba(194, 29, 17, 0.5);
-    color: rgba(194, 29, 17, 0.5);
+  border-bottom: 1px solid rgba(194, 29, 17, 0.5);
+  color: rgba(194, 29, 17, 0.5);
 }
 
 .site-nav__link--active {
@@ -119,11 +119,21 @@ img {
   background-position: center;
 }
 
+.contacts__phone:hover,
+.contacts__phone:focus {
+  opacity: 0.6;
+}
+
+.contacts__phone:active {
+  opacity: 0.3;
+}
+
 .breadcrumbs__list {
   padding: 58px 0 20px 0;
   margin: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs__item {
@@ -149,16 +159,34 @@ img {
   text-decoration: none;
 }
 
+.breadcrumbs__link[href]:hover,
+.breadcrumbs__link[href]:focus {
+  color: #0094FF;
+  text-decoration: underline;
+}
+
+.breadcrumbs__link[href]:active {
+  color: #eeeeee;
+}
+
 .page-article__header-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   margin: 0 auto;
 }
 
 .page-article__header {
   position: relative;
+  border-top: 1px solid transparent;
+}
+
+.page-article__header-content {
+  position: relative;
 }
 
 .page-article__title {
-  position: absolute;
   background-color: #fff;
   padding: 20px 38px;
   font-family: "Cormorant", "Georgia", serif;
@@ -168,8 +196,7 @@ img {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   width: 656px;
-  top: 11%;
-  left: 23%;
+  margin: 78px auto 78px;
 }
 
 .meta-row {
@@ -225,15 +252,13 @@ img {
 .content-wrapper {
   width: 700px;
   margin: 0 auto;
-  border-left: 1px solid #333;
-  border-right: 1px solid #333;
 }
 
 .page-article__lead {
   font-weight: 600;
   font-size: 18px;
   line-height: 31px;
-  padding: 26px 0;
+  padding: 27px 0 29px 0;
   margin: 50px 0 56px 0;
 }
 
@@ -274,7 +299,14 @@ img {
 .rules__item {
   counter-increment: rules-counter;
   position: relative;
-  margin-bottom: 67px;
+}
+
+.rules__item:nth-child(-n+7) {
+  margin-bottom: 66px;
+}
+
+.rules__item:nth-child(n+7) {
+  margin-top: 31px;
 }
 
 .rules__item::before {
@@ -386,8 +418,21 @@ img {
   background-position: 0 0;
 }
 
+.social__link:hover,
+.social__link:focus {
+  opacity: 0.6;
+}
+
+.social__link:active {
+  opacity: 0.3;
+}
+
 .rules__item:nth-child(2) img {
-  margin-top: 30px;
+  margin-top: 25px;
+}
+
+.rules__item:nth-child(3) img {
+  margin-top: -6px;
 }
 
 .rating {
@@ -402,7 +447,7 @@ img {
   line-height: 24px;
   text-align: center;
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .tools__list {
@@ -421,9 +466,18 @@ img {
   cursor: pointer;
 }
 
+.like-button:hover,
+.like-button:focus {
+  opacity: 0.6;
+}
+
+.like-button:active {
+  opacity: 0.3;
+}
+
 .like-button--no {
   position: relative;
-  top: 6px;
+  top: 8px;
   left: -3px;
   transform: rotate(-180deg);
 }
@@ -431,11 +485,17 @@ img {
 .restaurant-guide {
   width: 258px;
   height: 215px;
-  padding: 0 37px;
+  padding: 12px 37px 0;
+  margin-top: -12px;
   position: relative;
   background-color: #F1F1F2;
   border-top-right-radius: 25%;
   border-bottom-left-radius: 25%;
+}
+
+.restaurant-guide figure {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .restaurant-guide .mini-img {
@@ -468,24 +528,332 @@ img {
   color: #000;
   margin: 0;
   padding: 0;
-  margin-top: 12px;
+  padding: 11px 0;
   text-align: center;
 }
 
-.restaurant-guide-button  {
-  border: none;
+.restaurant-guide-button {
   position: absolute;
-  top: 53%;
+  width: 21px;
+  height: 12px;
+  top: 15px;
+  bottom: 0;
+  margin: auto 0;
+  border: none;
   background-color: transparent;
+  background-image: url("../img/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   cursor: pointer;
+}
+
+.restaurant-guide-button:hover,
+.restaurant-guide-button:focus {
+  opacity: 0.6;
+}
+
+.restaurant-guide-button:hover {
+  opacity: 0.3;
 }
 
 .restaurant-guide-button-prev {
   transform: rotate(-180deg);
-  left: 11%;
+  left: 35px;
+  opacity: 0.5;
 }
 
 .restaurant-guide-button-next {
-  right: 11%;
+  right: 35px;
 }
+
+.excursions {
+  position: relative;
+  margin-top: 66px;
+  margin-bottom: 119px;
+  margin-right: -235px;
+  margin-left: -235px;
+}
+
+.excursions__title {
+  font-family: "Cormorant", "Georgia", serif;
+  font-size: 25px;
+  line-height: 37px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.excursions__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: -20px;
+  margin-top: 22px;
+}
+
+.excursions__link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #000;
+}
+
+.excursions__link:hover,
+.excursions__link:focus {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.excursions__link:active {
+  opacity: 0.5;
+}
+
+.excursions__item {
+  margin-right: 19px;
+}
+
+.excursions__subtitle {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+.excursions__subtitle {
+  margin: 10px 0;
+  padding: 0;
+  order: 1;
+}
+
+.excursions-tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.excursions-tools span {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+.excursions-tools-button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.excursions-tools-button-prev {
+  margin-right: 10px;
+}
+
+.excursions-tools-button-next {
+  margin-left: 10px;
+}
+
+.excursions-tools-button:hover,
+.excursions-tools-button:focus {
+  opacity: 0.6;
+}
+
+.excursions-tools-button:active {
+  opacity: 0.3;
+}
+
+.more {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.more::after {
+  content: "";
+  width: 67px;
+  height: 12px;
+  background-image: url("../img/big-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  margin-left: 17px;
+}
+
+.more:hover,
+.more:focus {
+  opacity: 0.6;
+  text-decoration: underline;
+}
+
+.more:active {
+  opacity: 0.3;
+}
+
+.rules__item:nth-child(5) .rule__note {
+  margin-top: 26px;
+}
+
+.quote {
+  border-left: 5px solid #000;
+  padding-left: 30px;
+  margin: 0;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.quote::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -75px;
+  width: 38px;
+  height: 40px;
+  background-image: url("../img/quote.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.quote::after {
+  content: "Цитаты";
+  position: absolute;
+  left: -85px;
+  bottom: -45px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 61px;
+  color: #f1f1f2;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+}
+
+.quote__text {
+  font-family: "Cormorant", "Georgia", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 45px;
+  margin: 14px 0 21px 0;
+}
+
+.quote__author {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 31px;
+  color: #000;
+  opacity: 0.5;
+}
+
+.left-floated {
+  float: left;
+  margin: 2px 24px 0 0;
+}
+
+.page-article__footer {
+  margin-top: 47px;
+}
+
+.footer__title {
+  font-family: "Cormorant", "Georgia", serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 45px;
+  margin: 0;
+}
+
+.links__list {
+  padding: 0;
+  margin: 0;
+  margin-top: 33px;
+  list-style: none;
+}
+
+.links__item {
+  margin-bottom: 6px;
+}
+
+.link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: underline;
+  color: #0094FF;
+  text-transform: lowercase;
+}
+
+.news {
+  position: relative;
+  margin-top: 96px;
+  margin-bottom: 84px;
+  padding-top: 26px;
+}
+
+.news::before {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 6px;
+  top: 0;
+  left: 48%;
+  transform: translateY(-50%);
+  background-image: url(../img/points.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.news__title {
+  font-family: "Cormorant", "Georgia", serif;
+  font-size: 35px;
+  line-height: 52px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.news__link {
+  color: #000;
+  text-decoration: none;
+}
+
+.news__link:hover,
+.news__link:focus {
+  text-decoration: underline;
+}
+
+.news__list {
+  padding: 0;
+  margin: 20px 55px 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.news__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.news__text {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.page-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 25px 0 35px 0;
+}
+
+
 
